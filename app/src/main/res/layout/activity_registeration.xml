@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".register.RegistrationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.NavTabs.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentInsetStart="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/Theme.NavTabs.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="start"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="@string/register_text"
+        android:textColor="@color/purple_700"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="#f3f3f3" />
+
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/edit_style"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:maxLength="15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/edit_style"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:hint="@string/user_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="@dimen/dp_10"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:maxLength="15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+
+        <EditText
+            android:id="@+id/user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/edit_style"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:hint="@string/user_phone"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:maxLength="15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_email" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/edit_style"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:hint="@string/text_password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="@dimen/dp_10"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/btn_style"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingTop="@dimen/dp_11"
+            android:paddingBottom="@dimen/dp_11"
+            android:text="@string/register_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/have_an_account"
+        android:textColor="#858080"
+        android:layout_marginBottom="@dimen/dp_5"
+        app:layout_constraintBottom_toTopOf="@+id/Loginbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/login"
+        android:textColor="@color/purple_700"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
